@@ -1,0 +1,27 @@
+!!! 5
+%html
+  %head
+    %title Dette er en tittel
+  %body{:class => "test"}
+    #header
+      / Dette er en kommentar som vil vises i html
+      %h1 Topptittel
+    #main
+      -# Dette er en haml intern kommentar som ikke blir med ut i html
+      %a{:href => "vg.no"} nettavis
+      %br/
+      %p(htmlstyle="attribute" attr="hei")
+        = 1 + 2
+      %p= 2 + 3
+      #counting.my.class
+        - (1..10).each do |i|
+          %p= i
+      #interpolation
+        %p Her benyttes interpolation 1 + 2 = #{1 + 2} i en tekst
+        %p= "kan også skrives sånn: 1 + 2 = #{1 + 2} i en tekst"
+      #htmlescaping
+        %p&= "dette er en øæå & tekst"
+        %p
+          &= "dette øæå & tekst"
+    :javascript
+      alert("Hello world!!");

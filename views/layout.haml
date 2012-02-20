@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    :css
+      #content h1 {
+        color: blue;
+      }
+      #footer {
+        background-color: yellow;
+      }
+  %body
+    #content
+      =yield
+    #footer
+      %p My footer
